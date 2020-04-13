@@ -19,7 +19,11 @@
 
 #include "dataStructures.h"
 
+// global variables
+extern double gDescKeyPointsExectime_ms;   // contains exec time of last descriptor extraction in ms
+extern double gKeypointsExectime_ms;       // contains exec time of last keypoint detector in ms
 
+// function prototypes
 void detKeypointsHarris(std::vector<cv::KeyPoint> &keypoints, cv::Mat &img, bool bVis=false);
 void detKeypointsShiTomasi(std::vector<cv::KeyPoint> &keypoints, cv::Mat &img, bool bVis=false);
 void detKeypointsModern(std::vector<cv::KeyPoint> &keypoints, cv::Mat &img, std::string detectorType, bool bVis=false);
